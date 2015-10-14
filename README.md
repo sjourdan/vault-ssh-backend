@@ -1,5 +1,12 @@
 # Vault SSH Backend Infrastructure
 
+This idea here is simple:
+
+* 1 server will run Vault with a Consul Backend
+* Other servers will authenticate against it with One-Time Passwords
+
+The Vault/Consul combo will be entirely run through docker containers: [docker-vault](https://github.com/sjourdan/docker-vault) and [Progrium's Consul](https://hub.docker.com/r/progrium/consul/).
+
 ## Deploy the base infrastructure
 
 Fill in the blanks in the configuration file, don't forget SSH keys under `keys`.
