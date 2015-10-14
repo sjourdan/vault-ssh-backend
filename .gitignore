@@ -1,0 +1,4 @@
+keys/*
+terraform.tfvars
+*tfstate*
+*.tar.gz
