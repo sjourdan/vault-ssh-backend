@@ -155,14 +155,16 @@ To save time, we've pre-built the Vault's SSH Helper, but you can find more info
 
 * Download /install the helper under `/usr/local/bin`:
 
-      wget http://greenalto.s3.amazonaws.com/vault/vault-ssh-helper.tar.gz
+`wget http://greenalto.s3.amazonaws.com/vault/vault-ssh-helper.tar.gz`
 
 * Create a configuration file with the local Vault server local IP (here 10.135.136.198):
 
-      # mkdir /etc/vault-ssh-helper
-      # cat /etc/vault-ssh-helper/config.hcl
-      vault_addr="http://10.135.136.198:8200"
-      ssh_mount_point="ssh"
+```
+# mkdir /etc/vault-ssh-helper
+# cat /etc/vault-ssh-helper/config.hcl
+vault_addr="http://10.135.136.198:8200"
+ssh_mount_point="ssh"
+```
 
 * Edit PAM sshd config `/etc/pam.d/sshd`
 
