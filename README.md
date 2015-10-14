@@ -176,19 +176,23 @@ auth optional pam_unix.so no_set_pass use_first_pass nodelay
 
 * Edit sshd configuration in `/etc/ssh/sshd_config`:
 
-      ChallengeResponseAuthentication yes
-      UsePAM yes
-      PasswordAuthentication no
+```
+ChallengeResponseAuthentication yes
+UsePAM yes
+PasswordAuthentication no
+```
 
 * Restart OpenSSH
 
-      # systemctl restart ssh
+`# systemctl restart ssh`
 
 * Verify the connectivity is okay:
 
-      # vault-ssh-helper -verify -config-file=/etc/vault-ssh-helper/config.hcl
-      2015/10/14 10:26:22 [INFO] Using SSH Mount point: ssh
-      2015/10/14 10:26:22 [INFO] Agent verification successful!
+```
+# vault-ssh-helper -verify -config-file=/etc/vault-ssh-helper/config.hcl
+2015/10/14 10:26:22 [INFO] Using SSH Mount point: ssh
+2015/10/14 10:26:22 [INFO] Agent verification successful!
+```
 
 ### Create a credential
 
