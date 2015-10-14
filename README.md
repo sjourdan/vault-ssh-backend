@@ -5,7 +5,7 @@ This idea here is simple:
 * 1 server will run [Vault](https://vaultproject.io/) with a [Consul](https://consul.io/) backend.
 * Other servers will authenticate against it with One-Time Passwords (OTP)
 
-The Vault/Consul combo will be entirely run through docker containers: [docker-vault](https://github.com/sjourdan/docker-vault) and [Progrium's Consul](https://hub.docker.com/r/progrium/consul/).
+The Vault/Consul combo will be entirely run through docker containers: [docker-vault](https://github.com/sjourdan/docker-vault) and [Progrium's Consul container](https://hub.docker.com/r/progrium/consul/).
 
 The authentication will use the [Vault SSH Helper](https://github.com/hashicorp/vault-ssh-helper) on every node.
 
